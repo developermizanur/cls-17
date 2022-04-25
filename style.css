@@ -1,0 +1,428 @@
+/* defult-css */
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1240px;
+    margin: auto;
+}
+img{ 
+    max-width: 100%;
+} 
+
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+
+}
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, body, a, p, span {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header-section */
+.header-section{
+    background-color: black;
+    padding: 15px 0;
+}
+.logo{
+    float: left;
+    width: 50%;
+}
+.logo .logo-picture{
+
+    width: 15%;
+}
+
+.header-section .menu{
+    width: 50%;
+    float: left;
+}
+.header-section .menu ul{
+
+    text-align: right;
+}
+.header-section .menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: 21px;
+}
+.header-section .menu ul li a{
+    color: white;
+    font-size: 20px;
+    padding: 10px 10px;
+    position: relative;
+}
+.header-section .menu ul li a:hover{
+
+}
+.header-section .menu ul li a::before{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 10px;
+    bottom: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+}
+.header-section .menu ul li a:hover::before{
+    visibility: visible;
+    opacity: 1;
+    width: 80%;
+    background-color: white;
+}
+
+/* 2nd menu */
+.header-section .menu ul li ul{
+    width: 200px;
+    text-align: left;
+    position: absolute;
+    background-color: black;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    border-top: 3px solid white;
+}
+
+.header-section .menu ul li ul li{
+    display: block !important;
+    transition: .4s;
+    margin-left: 0 !important;
+}
+.header-section .menu ul li:hover > ul{
+   opacity: 1;
+   visibility: visible;
+}
+.header-section .menu ul li ul li:hover{
+    background-color: white;
+   
+}
+.header-section .menu ul li ul li:hover a{
+    color: black;
+   
+}
+   
+/* banner-section */
+.baner-section{
+    background-image: url(./image/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+}
+.baner-section .banner-content h2{
+
+    font-size: 50px;
+}
+.baner-section .banner-content p{
+    
+    font-size: 31px;
+}
+.banner-button{
+    padding: 20px 0;
+}
+.banner-button .btn-1 a{
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    border: none;
+}
+
+.banner-button .btn-2 a{
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    border: none;
+}
+.banner-button .btn-1 a:hover{
+    background-color: white;
+    color: black;
+    transition: .4s;
+}
+.banner-button .btn-2 a:hover{
+    background-color: black;
+    color: white;
+    transition: .4s;
+}
+
+/* about-section */
+.about-section{
+    background-color: #87a471;
+    height: 500px;
+}
+
+.about-section .about-header{
+    text-align: center;
+    padding-top: 40px;
+}
+.about-section .about-header h1{ 
+    color: #e8dfda;
+    text-decoration: underline;
+    margin-bottom: 26px;
+    font-size: 40px;
+
+}
+.about-section .about-content{
+    float: left;
+    width: 50%;
+}
+.about-section .about-content p{
+    color: white;
+    font-size: 18px;
+    margin-top: 81px;
+    margin-left: 100px;
+    line-height: 1.4;
+}
+.about-section .about-image{
+    text-align: center;
+}
+.about-section .about-image img{
+    display: inline-block;
+    width: 300px;
+}
+
+/* service-section */
+.service-section {
+    background-color: #606a64;
+    padding: 63px 0px;
+}
+.service-section .service-header {
+    text-align: center;
+    padding-top: 10px;
+} 
+.service-section .service-header h1 {
+    font-size: 40px;
+    color: #e8dfda;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.service-section .service-header h3 {
+    color: #dfe0e1;
+    font-size: 28px;
+    margin-bottom: 13px;
+}
+.service-section .service-header p {
+    color: #bbbdbb;
+    font-size: 20px;
+    margin-bottom: 46px;
+}
+.service-section .service-items {
+    text-align: center;
+}
+.service-items .service-box{
+    width: 30%;
+    display: inline-block;
+    background-color: #fff;
+    margin-left: 3%;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 25px;
+    color: #5e768f;
+}
+.service-items .service-box .icon-div{
+    width: 15%;
+    display: inline-block;
+    position: relative;
+}
+.service-items .service-box .icon-div span{
+    position: absolute;
+    top: -244px;
+    left: -6px;
+}
+.service-items .service-box .content-div{
+    width: 83%;
+    display: inline-block;
+}
+.service-items .service-box .content-div h1{
+    font-size: 49px;
+    padding: 20px 0px;
+}  
+    
+.service-items .service-box .content-div p{
+    text-align: left;
+    line-height: 1.9em;
+    font-size: 20px;
+} 
+
+
+/* service-sectio-2 */
+.service-2 {
+    background-color: #87a471;
+    padding: 12px 0px;
+    padding-bottom: 62px;
+}
+.service-2 .service-header-2 {
+    text-align: center;
+    padding-top: 44px;
+}
+.service-2 .service-header-2 h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 14px;
+} 
+.service-2 .service-header-2 p {
+    color: #fff;
+    font-size: 15px;
+}
+.service-2 .service-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.service-2 .img-group {
+    text-align: center;
+}
+.service-2 .service-title .img-div {
+    float: left;
+    border: 1px solid #fff;
+    margin-left: 50px;
+} 
+.service-2 .service-title .img-div img {
+    display: inline-block;
+    width: 550px;
+    height: auto;
+}
+.service-2 .service-title .img-div h3 {
+    color: #4e6885;
+    font-size: 25px;
+    margin: 10px 0;
+}
+.service-2 .service-title .img-div p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.service-2 .img-group .service-img {
+    display: block;
+    float: left;
+    width: 25%;
+    margin-top: 50px;
+}
+
+/* team-section */
+
+.team-section {
+    background-color: #5b9776;
+    padding: 20px 0px;
+}
+.team-section .team-heading {
+    text-align: center;
+    padding-top: 50px;
+}
+.team-section .team-heading h2 {
+    color: white;
+    text-decoration: underline;
+    font-size: 35px;
+    margin-bottom: 24px;
+}
+
+.team-section .team-member {
+    float: left;
+    width: 24%;
+    text-align: center;
+    margin-right: 4%;
+    margin-left: 5%;
+}
+.team-member .team-image {
+    display: inline-block;
+}  
+.team-member .team-image img {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.team-member .social-icon {
+    text-align: center;
+} 
+.team-member .social-icon span {
+    font-size: 27px;
+    color: white;
+    margin-right: 15px;
+    transition: .4s;
+    text-align: center;
+}
+
+.social-icon span:hover >i {
+    color: yellow;
+    cursor: pointer;
+    
+}
+
+/* contact-section */
+.contact-section {
+    background-color: #606a64;
+    padding: 61px 0px;
+} 
+
+.contact-section .contact-header {
+    text-align: center;
+    padding-top: 50px;
+}
+.contact-section .contact-header h1 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 20px;
+} 
+
+.contact-section .contact-header p {
+    color: #ebf2ec;
+    font-size: 17px;
+    margin-bottom: 29px;
+    padding: 0 150px;
+}
+
+.contact-header .button-div a button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #00bc9c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 23px;
+    transition: .4s;
+} 
+
+.contact-header .button-div a button:hover {
+    background-color: #30485a;
+}
+
+/* footer-section */
+footer{
+    margin-bottom: 5px;
+
+}
+footer h2{
+    color: white;
+    background-color: #2e2f31;
+    padding: 24px 0px;
+    text-align: center;
+    font-size: 15px;
+}
